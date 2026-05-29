@@ -1,7 +1,8 @@
-````md
 # Pharma Vision – AI-Based Tablet & Capsule Inspection System
 
-Pharma Vision is a computer vision-based medicine inspection system developed to detect defective tablets and capsules during conveyor belt movement. The goal of this project is to automate medicine quality inspection in pharmaceutical manufacturing by identifying damaged medicines such as broken tablets and open/broken capsules.
+Pharma Vision is a computer vision-based medicine inspection system developed to detect defective tablets and capsules during conveyor belt movement.
+
+The goal of this project is to automate medicine quality inspection in pharmaceutical manufacturing by identifying damaged medicines such as broken tablets and open/broken capsules.
 
 The system supports both **image and video inspection** through a simple **Flask-based web interface**, where users can upload medicine images or conveyor videos and get inspection results with defect detection, counts, and PASS/FAIL status.
 
@@ -13,7 +14,7 @@ The system supports both **image and video inspection** through a simple **Flask
 - Capsule defect detection for broken/open capsules
 - Conveyor belt video inspection support
 - Image and video upload support
-- Bounding box visualization for detected medicines
+- Bounding box visualization
 - PASS/FAIL inspection status
 - Flask-based web interface
 
@@ -23,15 +24,15 @@ The system supports both **image and video inspection** through a simple **Flask
 
 ### Home Page
 
-<img src="assets/home_page.png" width="850">
+![Home Page](./assets/home_page.png)
 
 ### Tablet Inspection Result
 
-<img src="assets/tablet_result.png" width="850">
+![Tablet Result](./assets/tablet_result.png)
 
 ### Capsule Inspection Result
 
-<img src="assets/capsule_result.png" width="850">
+![Capsule Result](./assets/capsule_result.png)
 
 ---
 
@@ -47,7 +48,7 @@ The system supports both **image and video inspection** through a simple **Flask
 
 ## Project Structure
 
-```bash
+```text
 Pharma-Vision/
 │── app.py
 │
@@ -80,31 +81,31 @@ Pharma-Vision/
 
 ## Installation
 
-### Clone the repository
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/rajchouhan19/Pharma-Vision.git
 ```
 
-### Move to project folder
+### 2. Move to Project Folder
 
 ```bash
 cd Pharma-Vision
 ```
 
-### Install dependencies
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run the application
+### 4. Run Application
 
 ```bash
 python app.py
 ```
 
-### Open in browser
+### 5. Open Browser
 
 ```text
 http://127.0.0.1:5000
@@ -114,8 +115,8 @@ http://127.0.0.1:5000
 
 ## Future Improvements
 
-* Deep Learning-based defect detection (YOLO)
-* Real-time live camera inspection
+* Deep Learning based defect detection (YOLO)
+* Real-time camera inspection
 * Better defect classification
 * Production-scale conveyor integration
 
