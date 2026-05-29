@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Pharma Vision
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="main-container">
+
+        <div class="hero-section">
+
+            <h1>
+                Pharma Vision
+            </h1>
+
+            <p class="tagline">
+                AI-Powered Industrial Medicine
+                Quality Inspection
+            </p>
+
+            <p class="sub-text">
+                Real-time defect detection for
+                tablets and capsules using
+                computer vision.
+            </p>
+
+        </div>
+
+
+        <div class="cards-container">
+
+            <!-- Tablet Card -->
+            <div class="card">
+
+                <div class="icon">
+                    💊
+                </div>
+
+                <h2>
+                    Tablet Inspection
+                </h2>
+
+                <p>
+                    Detect broken, chipped
+                    and defective tablets
+                    from image or video.
+                </p>
+
+                <form
+                    action="/process/tablet"
+                    method="POST"
+                    enctype="multipart/form-data"
+                >
+
+                    <label
+                        class="upload-box"
+                    >
+
+                        <input
+                            type="file"
+                            name="file"
+                            required
+                        >
+
+                        <span>
+                            Choose Image/Video
+                        </span>
+
+                    </label>
+
+                    <button
+                        type="submit"
+                    >
+                        Analyze Tablet
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Capsule Card -->
+            <div class="card">
+
+                <div class="icon">
+                    💊
+                </div>
+
+                <h2>
+                    Capsule Inspection
+                </h2>
+
+                <p>
+                    Detect damaged,
+                    opened and defective
+                    capsules from image
+                    or video.
+                </p>
+
+                <form
+                    action="/process/capsule"
+                    method="POST"
+                    enctype="multipart/form-data"
+                >
+
+                    <label
+                        class="upload-box"
+                    >
+
+                        <input
+                            type="file"
+                            name="file"
+                            required
+                        >
+
+                        <span>
+                            Choose Image/Video
+                        </span>
+
+                    </label>
+
+                    <button
+                        type="submit"
+                    >
+                        Analyze Capsule
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

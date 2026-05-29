@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,
+        initial-scale=1.0"
+    >
+
+    <title>
+        Inspection Result
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for(
+        'static',
+        filename='style.css'
+        ) }}"
+    >
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <div class="hero-section">
+
+        <h1>
+            {{ inspection.title() }}
+            Inspection Result
+        </h1>
+
+        <p class="tagline">
+
+            AI Powered Medicine
+            Quality Analysis
+
+        </p>
+
+    </div>
+
+    <div class="result-card">
+
+        <!-- STATUS -->
+        <div class="status-box">
+
+            {% if status == "PASS" %}
+
+            <div class="pass">
+
+                PASS
+
+            </div>
+
+            {% else %}
+
+            <div class="fail">
+
+                FAIL
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <!-- COUNTS -->
+        <div class="stats">
+
+            <div class="stat-item">
+
+                <h3>
+                    Good
+                </h3>
+
+                <p>
+                    {{ good }}
+                </p>
+
+            </div>
+
+            <div class="stat-item">
+
+                <h3>
+                    Defective
+                </h3>
+
+                <p>
+                    {{ defective }}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGE -->
+        {% if media_type == "image" %}
+
+        <img
+            class="result-media"
+
+            src="{{
+            url_for(
+            'static',
+            filename='outputs/'
+            + output_file
+            )
+            }}"
+        >
+
+        {% endif %}
+
+
+        <!-- VIDEO -->
+        {% if media_type == "video" %}
+
+        <video
+            controls
+            autoplay
+            muted
+            class="result-media"
+        >
+
+            <source
+                src="{{
+                url_for(
+                'static',
+                filename='outputs/'
+                + output_file
+                )
+                }}"
+                type="video/mp4"
+            >
+
+        </video>
+
+        {% endif %}
+
+        <!-- BUTTON -->
+        <a
+            href="/"
+            class="back-btn"
+        >
+
+            Analyze Again
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
